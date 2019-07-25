@@ -22,7 +22,7 @@ public class Video {
             name = "native",
             strategy = "native"
     )
-    private String id;
+    private Integer id;
 
     @Column
     @NotNull
@@ -50,11 +50,11 @@ public class Video {
     @UpdateTimestamp
     private LocalDateTime updateTime;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -74,6 +74,15 @@ public class Video {
         this.description = description;
     }
 
+    public String getTags() {
+        return tags;
+    }
+
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+
     public String getAuthor() {
         return author;
     }
@@ -88,14 +97,6 @@ public class Video {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public String getTags() {
-        return tags;
-    }
-
-    public void setTags(String tags) {
-        this.tags = tags;
     }
 
     public LocalDateTime getCreateTime() {
